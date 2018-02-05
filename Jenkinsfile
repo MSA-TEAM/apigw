@@ -38,7 +38,7 @@ node {
         } catch(e) {
             mail subject: "Jenkins Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) failed with ${e.message}",
                 to: 'blue.park@kt.com',
-                body: "Please go to $env.BUILD_URL."
+                body: "Please go to http://jenkins.gsp.sicc.co.kr/"
         }
     }
 

@@ -22,9 +22,9 @@ public class ServiceRouteConfiguration {
         return new AlwaysSampler();
     }
 
-//    @Bean
-//    public PatternServiceRouteMapper serviceRouteMapper() {
-//        return new PatternServiceRouteMapper("(?<name>^.+)-(?<version>v.+$)",
-//            "${version}/${name}");
-//    }
+    @Bean
+    public PatternServiceRouteMapper serviceRouteMapper() {
+        return new PatternServiceRouteMapper("(?<name>^.+)-(?<version>v.+$)",
+            "${version}/${name}");
+    }
 }
