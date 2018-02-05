@@ -20,7 +20,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources.stateless(true)
-                .resourceId("MSA-API");
+                .resourceId("GSP-API");
     }
 
     @Override
