@@ -19,7 +19,7 @@ metadata:
     app: msa-apigw
     visualize: "true"
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: msa-apigw
