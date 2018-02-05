@@ -42,6 +42,6 @@ node {
     }
 
     stage('Deploy') {
-        sh 'kubectl rolling-update msa-apigw -f deployment.yaml'
+        sh 'kubectl apply -f deployment.yaml'
     }
 }

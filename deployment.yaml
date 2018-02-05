@@ -19,7 +19,7 @@ metadata:
     app: msa-apigw
     visualize: "true"
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: msa-apigw
@@ -27,7 +27,7 @@ spec:
     metadata:
       labels:
         app: msa-apigw
-        version: "1.0.0-RELEASE"
+        version: "1.0.1-RELEASE"
     spec:
       containers:
       - name: msa-apigw
