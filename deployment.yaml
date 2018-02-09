@@ -27,16 +27,16 @@ spec:
     metadata:
       labels:
         app: msa-apigw
-        version: "1.0.1-RELEASE"
+        version: "1.0.1"
     spec:
       containers:
       - name: msa-apigw
-        image: docker.gsp.sicc.co.kr/apigw:1.0.1-RELEASE
+        image: docker.gsp.sicc.co.kr/apigw:1.0.1
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: prd
         - name: spring.cloud.config.uri
-          value: http://100.70.69.238:8888
+          value: http://100.102.123.211:8888
         ports:
         - name: http
           containerPort: 9090
