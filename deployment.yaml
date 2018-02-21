@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: msa-apigw-service
+  name: msa-apigw
 spec:
   type: LoadBalancer
   selector:
@@ -17,7 +17,6 @@ metadata:
   name: msa-apigw
   labels:
     app: msa-apigw
-    visualize: "true"
 spec:
   replicas: 2
   selector:
@@ -34,9 +33,9 @@ spec:
         image: docker.gsp.sicc.co.kr/apigw:1.0.1
         env:
         - name: SPRING_PROFILES_ACTIVE
-          value: prd
+          value: dev
         - name: spring.cloud.config.uri
-          value: http://100.102.123.211:8888
+          value: http://msa-config.development.svc.cluster.local:8888
         ports:
         - name: http
           containerPort: 9090
