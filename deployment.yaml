@@ -26,11 +26,11 @@ spec:
     metadata:
       labels:
         app: msa-apigw
-        version: "1.0.1"
+        version: "1.0.2"
     spec:
       containers:
       - name: msa-apigw
-        image: docker.gsp.sicc.co.kr/apigw:1.0.1
+        image: docker.gsp.sicc.co.kr/apigw:1.0.2
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: dev
