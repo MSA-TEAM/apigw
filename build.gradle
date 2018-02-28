@@ -1,7 +1,7 @@
 buildscript {
 	ext {
 		springBootVersion = '1.5.9.RELEASE'
-		gradleDockerPluginVersion = '0.17.2'
+		gradleDockerPluginVersion = '0.19.2'
 	}
 	repositories {
 		mavenCentral()
@@ -35,8 +35,11 @@ group = 'docker.gsp.sicc.co.kr'
 
 docker {
 	name "${project.group}/${jar.baseName}:${jar.version}"
+	tags 'latest'
 	files jar.archivePath
 	buildArgs(['JAR_FILE': "${jar.archiveName}"])
+    pull true
+    noCache true
 }
 
 ext {
